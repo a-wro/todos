@@ -10,9 +10,11 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <TaskBox />
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <TaskBox />
+        </div>
+      </Provider>
     );
   }
 }

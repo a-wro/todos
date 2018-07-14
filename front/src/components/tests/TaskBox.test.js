@@ -1,5 +1,5 @@
 import React from 'react';
-import TaskBox from '../TaskBox'
+import { TaskBox } from '../TaskBox'
 import TaskForm from '../forms/taskForm'
 import { shallow } from 'enzyme'
 

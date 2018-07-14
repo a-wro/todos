@@ -1,9 +1,16 @@
 import React from 'react'
 import TaskForm from './forms/taskForm'
+import { connect } from 'react-redux'
+import { getTodos } from '../actions/getTodos'
 
-class TaskBox extends React.Component {
+export class TaskBox extends React.Component {
+
+    componentDidMount() {
+        this.props.getTodos()
+    }
+
     state = {
-        term: 'l0lZ',
+        term: '',
 
     }
 
@@ -17,6 +24,8 @@ class TaskBox extends React.Component {
     }
 
     render() {
+        const { todos } = this.props
+        console.log(todos.todos)
         return (
             <div>
                 <TaskForm 
@@ -24,9 +33,26 @@ class TaskBox extends React.Component {
                     handleSubmit={this.handleSubmit} 
                     handleChange={this.handleChange}
                 />
+
+                <div>
+                  {todos.todos.map(elem => {
+                      return (
+                        <div key={elem.id}>
+                            {elem.task}
+                        </div>
+                      )
+                  })}
+                </div>
             </div>
         )
     }
 }
 
-export default TaskBox
+
+const mapStateToProps = state => {
+    return {
+        todos: state.todos
+    }
+}
+
+export default connect(mapStateToProps, { getTodos })(TaskBox)
