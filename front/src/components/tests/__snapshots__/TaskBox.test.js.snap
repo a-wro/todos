@@ -37,7 +37,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <TaskForm />,
+        <TaskForm
+          onChange={[Function]}
+          onSubmit={[Function]}
+          value="test"
+/>,
         <div>
           <div>
                     test
@@ -54,7 +58,11 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "onChange": [Function],
+          "onSubmit": [Function],
+          "value": "test",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -110,7 +118,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <TaskForm />,
+          <TaskForm
+            onChange={[Function]}
+            onSubmit={[Function]}
+            value="test"
+/>,
           <div>
             <div>
                         test
@@ -127,7 +139,11 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "onChange": [Function],
+            "onSubmit": [Function],
+            "value": "test",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

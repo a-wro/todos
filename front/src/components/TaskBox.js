@@ -9,11 +9,31 @@ export class TaskBox extends React.Component {
         this.props.getTodos()
     }
 
+    state = { 
+        term: ''
+    }
+
+    handleChange = e => { 
+        this.setState({ term: e.target.value })
+    }
+
+    handleSubmit = e => {
+        if(this.props.handleSubmit) { this.props.handleSubmit(e)}
+        e.preventDefault()
+        console.log('submitted')
+    }
+
     render() {
         const { todos } = this.props
         return (
             <div>
-                <TaskForm/>
+                
+                <TaskForm 
+                    onChange={this.handleChange}
+                    value={this.state.term} 
+                    onSubmit={this.handleSubmit}
+                />
+                
                 <div>
                   {todos.tasks.map(todo => {
                       return (

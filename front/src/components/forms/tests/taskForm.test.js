@@ -8,8 +8,8 @@ describe('TaskForm', () => {
     const mockSubmit = jest.fn()
 
     const props = {
-        handleChange: mockChange,
-        handleSubmit: mockSubmit,
+        onChange: mockChange,
+        onSubmit: mockSubmit,
     }
     
     const taskForm = shallow(<TaskForm {...props} />)
@@ -29,10 +29,6 @@ describe('TaskForm', () => {
         it('onChange handler called', () => {
             expect(mockChange).toHaveBeenCalledWith(event)
         })
-
-        it('local state updates', () => {
-            expect(taskForm.state().term).toEqual(testData)
-        })
     })
 
     describe('submitting input', () => {
@@ -42,7 +38,7 @@ describe('TaskForm', () => {
             })
         })
 
-        it('submits properly', () => {
+        it('calls its callback from props', () => {
             expect(mockSubmit).toHaveBeenCalled()
         })
     

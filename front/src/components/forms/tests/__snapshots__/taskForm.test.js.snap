@@ -5,8 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TaskForm
-    handleChange={[Function]}
-    handleSubmit={[Function]}
+    onChange={[Function]}
+    onSubmit={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -26,7 +26,7 @@ ShallowWrapper {
           onChange={[Function]}
           placeholder="Enter a task"
           type="text"
-          value=""
+          value={undefined}
 />,
         <input
           type="submit"
@@ -47,7 +47,7 @@ ShallowWrapper {
           "onChange": [Function],
           "placeholder": "Enter a task",
           "type": "text",
-          "value": "",
+          "value": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -80,7 +80,7 @@ ShallowWrapper {
             onChange={[Function]}
             placeholder="Enter a task"
             type="text"
-            value=""
+            value={undefined}
 />,
           <input
             type="submit"
@@ -101,7 +101,7 @@ ShallowWrapper {
             "onChange": [Function],
             "placeholder": "Enter a task",
             "type": "text",
-            "value": "",
+            "value": undefined,
           },
           "ref": null,
           "rendered": null,
