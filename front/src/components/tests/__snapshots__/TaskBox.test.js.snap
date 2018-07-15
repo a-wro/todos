@@ -40,7 +40,7 @@ ShallowWrapper {
         <TaskForm
           onChange={[Function]}
           onSubmit={[Function]}
-          value="test"
+          value=""
 />,
         <div>
           <div>
@@ -61,7 +61,7 @@ ShallowWrapper {
         "props": Object {
           "onChange": [Function],
           "onSubmit": [Function],
-          "value": "test",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -121,7 +121,7 @@ ShallowWrapper {
           <TaskForm
             onChange={[Function]}
             onSubmit={[Function]}
-            value="test"
+            value=""
 />,
           <div>
             <div>
@@ -142,7 +142,7 @@ ShallowWrapper {
           "props": Object {
             "onChange": [Function],
             "onSubmit": [Function],
-            "value": "test",
+            "value": "",
           },
           "ref": null,
           "rendered": null,

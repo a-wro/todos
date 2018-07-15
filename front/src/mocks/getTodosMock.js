@@ -1,7 +1,7 @@
 import { getTodos } from "../actions/getTodos";
 
 //curl http:127.0.0.1:8000/todos/
-export const getTodosMock =  [
+const getTodosMock =  [
     {
        "id": 1,
        "task": "test",

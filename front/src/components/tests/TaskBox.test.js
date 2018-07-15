@@ -20,16 +20,26 @@ describe('TaskBox', () => {
       it('correctly renders a `TaskForm` component', () => {
         expect(taskbox.find('TaskForm').exists()).toBe(true)    
       })
+  })
 
   describe('State related tests', () => {
-    describe('Term changes after handleChange call', () => {
-      taskbox.find('TaskForm').simulate('change', { target: { value: 'test' } })
-      expect(taskbox.state().term).toEqual('test')
+    const event = {
+      target: { 
+        value: 'test'
+      }
+    }
+    
+    it('Term changes after child calls onChange callback', () => {
+      taskbox.find('TaskForm').simulate('change', event)
+      expect(taskbox.state().term).toEqual(event.target.value)
 
     })
+  
+  
+    
   })
 
-  })
+  
 
  
 

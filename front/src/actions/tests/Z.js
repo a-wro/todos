@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
-import * as actions from '../getTodos'
+import * as actions from '../postTodo'
 import moxios from 'moxios'
-import { getTodosMock } from '../../mocks/getTodosMock'
+import  postTodoMock from '../../mocks/postTodoMock'
 import thunk from 'redux-thunk';
 
 const middlewares = [thunk]
@@ -19,18 +19,18 @@ describe('test getTodos actions', () => {
         moxios.wait(() => {
             const request = moxios.requests.mostRecent()
             request.respondWith({
-                status: 200,
-                response: getTodosMock,
+                status: 201,
+                response: postTodoMock,
             })
         })
     
         const expectedActions = [
-            { type: actions.GET_TODOS_START },
-            { type: actions.GET_TODOS_SUCCESS, payload: getTodosMock },
+            { type: actions.POST_TODO_START },
+            { type: actions.POST_TODO_SUCCESS, payload: postTodoMock },
         ]
 
         const store = mockStore({ todos: [] })
-        return store.dispatch(actions.getTodos()).then(() => {
+        return store.dispatch(actions.postTodo('task')).then(() => {
             //return of async actions
             expect(store.getActions()).toEqual(expectedActions)
     })
