@@ -1,6 +1,7 @@
 from rest_framework.test import APIClient, APITestCase
 from rest_framework import status
 from ..models import Todo, Checklist
+from ..serializers import TodoSerializer, ChecklistSerializer
 from django.urls import reverse
 
 client = APIClient()
@@ -14,10 +15,10 @@ class TestREQUESTS:
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_post(self):
-        '''
-        response = client.post(self.post_url, self.mock_obj)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        '''
+        serialized = self.serializer(self.mock_obj)
+        response = client.post(self.post_url, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        
     def test_put(self):
         pass
         
@@ -27,6 +28,7 @@ class TestTodo(APITestCase, TestREQUESTS):
         self.collection_url = reverse('todos')
         self.single_url = reverse('todo', kwargs={ 'pk': 1})
         self.post_url = reverse('todo_create')
+        self.serializer = TodoSerializer
 
 class TestChecklist(APITestCase, TestREQUESTS):
     def setUp(self):
@@ -35,3 +37,4 @@ class TestChecklist(APITestCase, TestREQUESTS):
         self.collection_url = reverse('checklists')
         self.single_url = reverse('checklist', kwargs={ 'pk': 1})
         self.post_url = reverse('checklist_create')
+        self.serializer = ChecklistSerializer

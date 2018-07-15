@@ -9,36 +9,16 @@ export class TaskBox extends React.Component {
         this.props.getTodos()
     }
 
-    state = {
-        term: '',
-
-    }
-
-    handleSubmit = e => {
-        e.preventDefault()
-        console.log('submitted')
-    }
-
-    handleChange = e => {
-        this.setState({ term: e.target.value })
-    }
-
     render() {
         const { todos } = this.props
-        console.log(todos.todos)
         return (
             <div>
-                <TaskForm 
-                    value={this.state.term} 
-                    handleSubmit={this.handleSubmit} 
-                    handleChange={this.handleChange}
-                />
-
+                <TaskForm/>
                 <div>
-                  {todos.todos.map(elem => {
+                  {todos.tasks.map(todo => {
                       return (
-                        <div key={elem.id}>
-                            {elem.task}
+                        <div key={todo.id}>
+                            {todo.task}
                         </div>
                       )
                   })}
@@ -47,7 +27,6 @@ export class TaskBox extends React.Component {
         )
     }
 }
-
 
 const mapStateToProps = state => {
     return {

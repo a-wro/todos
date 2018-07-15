@@ -2,7 +2,7 @@ import { GET_TODOS_SUCCESS, GET_TODOS_START, GET_TODOS_FAIL } from "../actions/g
 
 //export for testing
 export const initialState = {
-    todos: [],
+    tasks: [],
     loading: false,
     error: null,
 }
@@ -21,7 +21,7 @@ const todoReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 error: null,
-                todos: action.payload
+                tasks: action.payload
             }
             
         case GET_TODOS_FAIL:

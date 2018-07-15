@@ -19,7 +19,7 @@ describe('todoReducer', () => {
         expect(todoReducer(undefined, { 
             type: GET_TODOS_SUCCESS, 
             payload: getTodosMock}))
-            .toEqual({...initialState, todos: getTodosMock })
+            .toEqual({...initialState, tasks: getTodosMock })
     })
 
 })

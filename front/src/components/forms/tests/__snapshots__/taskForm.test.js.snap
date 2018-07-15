@@ -4,7 +4,10 @@ exports[`TaskForm rendering renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TaskForm />,
+  Symbol(enzyme.__unrendered__): <TaskForm
+    handleChange={[Function]}
+    handleSubmit={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,17 +22,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
-          onChange={undefined}
+          className="task-input"
+          onChange={[Function]}
           placeholder="Enter a task"
           type="text"
-          value={undefined}
+          value=""
 />,
         <input
           type="submit"
           value="add task"
 />,
       ],
-      "onSubmit": undefined,
+      "className": "task-form",
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -38,10 +43,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "onChange": undefined,
+          "className": "task-input",
+          "onChange": [Function],
           "placeholder": "Enter a task",
           "type": "text",
-          "value": undefined,
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -70,17 +76,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
-            onChange={undefined}
+            className="task-input"
+            onChange={[Function]}
             placeholder="Enter a task"
             type="text"
-            value={undefined}
+            value=""
 />,
           <input
             type="submit"
             value="add task"
 />,
         ],
-        "onSubmit": undefined,
+        "className": "task-form",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -89,10 +97,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "onChange": undefined,
+            "className": "task-input",
+            "onChange": [Function],
             "placeholder": "Enter a task",
             "type": "text",
-            "value": undefined,
+            "value": "",
           },
           "ref": null,
           "rendered": null,

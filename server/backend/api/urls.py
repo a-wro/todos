@@ -7,5 +7,5 @@ urlpatterns = [
     path('checklists/', ChecklistList.as_view(), name='checklists'),
     path('checklist/<int:pk>/', ChecklistView.as_view(), name='checklist'),
     path('checklist/create/', ChecklistCreate.as_view(), name='checklist_create'),
-    path('todo/create', TodoCreate.as_view(), name='todo_create'),
+    path('todo/create/', TodoCreate.as_view(), name='todo_create'),
 ]

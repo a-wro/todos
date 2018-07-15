@@ -1,3 +1,5 @@
+import { getTodos } from "../actions/getTodos";
+
 //curl http:127.0.0.1:8000/todos/
 export const getTodosMock =  [
     {
@@ -14,4 +16,4 @@ export const getTodosMock =  [
     }
  ]
 
- export const getChecklistMock = []
+ export default getTodosMock
