@@ -2,6 +2,7 @@ import React from 'react'
 import TaskForm from './forms/taskForm'
 import { connect } from 'react-redux'
 import { getTodos } from '../actions/getTodos'
+import { postTodo } from '../actions/postTodo'
 
 export class TaskBox extends React.Component {
 
@@ -17,10 +18,9 @@ export class TaskBox extends React.Component {
         this.setState({ term: e.target.value })
     }
 
-    handleSubmit = e => {
-        if(this.props.handleSubmit) { this.props.handleSubmit(e)}
+    handleSubmit = e => {  
         e.preventDefault()
-        console.log('submitted')
+        this.props.postTodo(this.state.term)
     }
 
     render() {
@@ -54,4 +54,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getTodos })(TaskBox)
+export default connect(mapStateToProps, { getTodos, postTodo })(TaskBox)

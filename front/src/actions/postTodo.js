@@ -26,8 +26,8 @@ export const postTodo = task => dispatch => {
     dispatch(postTodoStart)
     return axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/todo/create',
-        data: task
+        url: 'http://127.0.0.1:8000/api/todo/create/',
+        data: { task: task, completed: 'False' }
     })
     .then(res => {
         dispatch(postTodoSuccess(res.data))
