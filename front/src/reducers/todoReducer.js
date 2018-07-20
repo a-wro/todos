@@ -15,7 +15,7 @@ const todoReducer = (state = initialState, action) => {
                 loading: true,
                 error: null
             }
-        
+
         case GET_TODOS_SUCCESS:
             return {
                 ...state,
@@ -23,7 +23,7 @@ const todoReducer = (state = initialState, action) => {
                 error: null,
                 tasks: action.payload
             }
-            
+
         case GET_TODOS_FAIL:
             return {
                 ...state,

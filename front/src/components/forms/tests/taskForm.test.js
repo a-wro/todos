@@ -11,9 +11,9 @@ describe('TaskForm', () => {
         onChange: mockChange,
         onSubmit: mockSubmit,
     }
-    
+
     const taskForm = shallow(<TaskForm {...props} />)
-    
+
     describe('rendering', () => {
         it('renders correctly', () => {
             expect(taskForm).toMatchSnapshot()
@@ -41,13 +41,11 @@ describe('TaskForm', () => {
         it('calls its callback from props', () => {
             expect(mockSubmit).toHaveBeenCalled()
         })
-    
-    
-    })
-       
-    
-    
 
-    
+    })
+
+
+
+
 
 })

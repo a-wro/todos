@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import TodoList, TodoView, TodoCreate, ChecklistList, ChecklistView, ChecklistCreate
+from .views import TodoList, TodoView, TodoCreate, ChecklistList, ChecklistView, ChecklistCreate, TodoPut
 
 urlpatterns = [
     path('todos/', TodoList.as_view(), name='todos'),
@@ -8,4 +8,5 @@ urlpatterns = [
     path('checklist/<int:pk>/', ChecklistView.as_view(), name='checklist'),
     path('checklist/create/', ChecklistCreate.as_view(), name='checklist_create'),
     path('todo/create/', TodoCreate.as_view(), name='todo_create'),
+    path('todo/update/<int:pk>/', TodoPut.as_view(), name='todo_put'),
 ]

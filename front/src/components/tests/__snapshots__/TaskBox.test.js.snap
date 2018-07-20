@@ -44,10 +44,16 @@ ShallowWrapper {
 />,
         <div>
           <div>
-                    test
+                    <Todo
+                              completed={false}
+                              task="test"
+                    />
           </div>
           <div>
-                    test 2
+                    <Todo
+                              completed={false}
+                              task="test 2"
+                    />
           </div>
 </div>,
       ],
@@ -74,10 +80,16 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div>
-              test
+              <Todo
+                            completed={false}
+                            task="test"
+              />
 </div>,
             <div>
-              test 2
+              <Todo
+                            completed={false}
+                            task="test 2"
+              />
 </div>,
           ],
         },
@@ -88,10 +100,24 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "host",
             "props": Object {
-              "children": "test",
+              "children": <Todo
+                completed={false}
+                task="test"
+/>,
             },
             "ref": null,
-            "rendered": "test",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "completed": false,
+                "task": "test",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
           Object {
@@ -99,10 +125,24 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "host",
             "props": Object {
-              "children": "test 2",
+              "children": <Todo
+                completed={false}
+                task="test 2"
+/>,
             },
             "ref": null,
-            "rendered": "test 2",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "completed": false,
+                "task": "test 2",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
         ],
@@ -125,10 +165,16 @@ ShallowWrapper {
 />,
           <div>
             <div>
-                        test
+                        <Todo
+                                    completed={false}
+                                    task="test"
+                        />
             </div>
             <div>
-                        test 2
+                        <Todo
+                                    completed={false}
+                                    task="test 2"
+                        />
             </div>
 </div>,
         ],
@@ -155,10 +201,16 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div>
-                test
+                <Todo
+                                completed={false}
+                                task="test"
+                />
 </div>,
               <div>
-                test 2
+                <Todo
+                                completed={false}
+                                task="test 2"
+                />
 </div>,
             ],
           },
@@ -169,10 +221,24 @@ ShallowWrapper {
               "key": "1",
               "nodeType": "host",
               "props": Object {
-                "children": "test",
+                "children": <Todo
+                  completed={false}
+                  task="test"
+/>,
               },
               "ref": null,
-              "rendered": "test",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "completed": false,
+                  "task": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "div",
             },
             Object {
@@ -180,10 +246,24 @@ ShallowWrapper {
               "key": "2",
               "nodeType": "host",
               "props": Object {
-                "children": "test 2",
+                "children": <Todo
+                  completed={false}
+                  task="test 2"
+/>,
               },
               "ref": null,
-              "rendered": "test 2",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "completed": false,
+                  "task": "test 2",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "div",
             },
           ],

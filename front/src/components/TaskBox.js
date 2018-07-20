@@ -1,5 +1,6 @@
 import React from 'react'
 import TaskForm from './forms/taskForm'
+import Todo from './Todo'
 import { connect } from 'react-redux'
 import { getTodos } from '../actions/getTodos'
 import { postTodo } from '../actions/postTodo'
@@ -10,15 +11,15 @@ export class TaskBox extends React.Component {
         this.props.getTodos()
     }
 
-    state = { 
+    state = {
         term: ''
     }
 
-    handleChange = e => { 
+    handleChange = e => {
         this.setState({ term: e.target.value })
     }
 
-    handleSubmit = e => {  
+    handleSubmit = e => {
         e.preventDefault()
         this.props.postTodo(this.state.term)
     }
@@ -27,18 +28,21 @@ export class TaskBox extends React.Component {
         const { todos } = this.props
         return (
             <div>
-                
-                <TaskForm 
+
+                <TaskForm
                     onChange={this.handleChange}
-                    value={this.state.term} 
+                    value={this.state.term}
                     onSubmit={this.handleSubmit}
                 />
-                
+
                 <div>
                   {todos.tasks.map(todo => {
                       return (
                         <div key={todo.id}>
-                            {todo.task}
+                            <Todo
+                                task={todo.task}
+                                completed={todo.completed}
+                            />
                         </div>
                       )
                   })}

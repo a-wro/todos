@@ -26,7 +26,7 @@ class TestChecklist(APITestCase, TestModel):
         self.model = Checklist
         self.todo = Todo.objects.create(task='Clean the kitchen')
         self._obj = self.model.objects.create(todos=self.todo)
-        
+
     '''check if two-sided relationship was established'''
     def test_relationship(self):
         self.assertIn(self._obj, self.todo.checklist_set.all())
@@ -34,4 +34,3 @@ class TestChecklist(APITestCase, TestModel):
 
 
 
-    
