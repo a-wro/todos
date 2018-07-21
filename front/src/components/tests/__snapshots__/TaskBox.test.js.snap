@@ -42,22 +42,22 @@ ShallowWrapper {
           onSubmit={[Function]}
           value=""
 />,
-        <div>
-          <div>
+        <WithStyles(List)>
+          <WithStyles(ListItem)>
                     <Connect(Todo)
                               completed={false}
                               id={1}
                               task="test"
                     />
-          </div>
-          <div>
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)>
                     <Connect(Todo)
                               completed={false}
                               id={2}
                               task="test 2"
                     />
-          </div>
-</div>,
+          </WithStyles(ListItem)>
+</WithStyles(List)>,
       ],
     },
     "ref": null,
@@ -78,23 +78,23 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
           "children": Array [
-            <div>
+            <WithStyles(ListItem)>
               <Connect(Todo)
                             completed={false}
                             id={1}
                             task="test"
               />
-</div>,
-            <div>
+</WithStyles(ListItem)>,
+            <WithStyles(ListItem)>
               <Connect(Todo)
                             completed={false}
                             id={2}
                             task="test 2"
               />
-</div>,
+</WithStyles(ListItem)>,
           ],
         },
         "ref": null,
@@ -102,7 +102,7 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "1",
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
               "children": <Connect(Todo)
                 completed={false}
@@ -124,12 +124,12 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "div",
+            "type": [Function],
           },
           Object {
             "instance": null,
             "key": "2",
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
               "children": <Connect(Todo)
                 completed={false}
@@ -151,10 +151,10 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "div",
+            "type": [Function],
           },
         ],
-        "type": "div",
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -171,22 +171,22 @@ ShallowWrapper {
             onSubmit={[Function]}
             value=""
 />,
-          <div>
-            <div>
+          <WithStyles(List)>
+            <WithStyles(ListItem)>
                         <Connect(Todo)
                                     completed={false}
                                     id={1}
                                     task="test"
                         />
-            </div>
-            <div>
+            </WithStyles(ListItem)>
+            <WithStyles(ListItem)>
                         <Connect(Todo)
                                     completed={false}
                                     id={2}
                                     task="test 2"
                         />
-            </div>
-</div>,
+            </WithStyles(ListItem)>
+</WithStyles(List)>,
         ],
       },
       "ref": null,
@@ -207,23 +207,23 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
             "children": Array [
-              <div>
+              <WithStyles(ListItem)>
                 <Connect(Todo)
                                 completed={false}
                                 id={1}
                                 task="test"
                 />
-</div>,
-              <div>
+</WithStyles(ListItem)>,
+              <WithStyles(ListItem)>
                 <Connect(Todo)
                                 completed={false}
                                 id={2}
                                 task="test 2"
                 />
-</div>,
+</WithStyles(ListItem)>,
             ],
           },
           "ref": null,
@@ -231,7 +231,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "1",
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": <Connect(Todo)
                   completed={false}
@@ -253,12 +253,12 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "div",
+              "type": [Function],
             },
             Object {
               "instance": null,
               "key": "2",
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": <Connect(Todo)
                   completed={false}
@@ -280,10 +280,10 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "div",
+              "type": [Function],
             },
           ],
-          "type": "div",
+          "type": [Function],
         },
       ],
       "type": "div",

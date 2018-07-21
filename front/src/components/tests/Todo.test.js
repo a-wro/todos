@@ -14,6 +14,10 @@ describe('Todo', () => {
             expect(todo).toMatchSnapshot()
         })
 
+        it('renders a task div', () => {
+            expect(todo.find('.task').exists()).toBe(true)
+        })
+
         it('renders a checkbox', () => {
             expect(todo.find('.task-checkbox').exists()).toBe(true)
         })

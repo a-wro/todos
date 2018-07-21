@@ -11,11 +11,11 @@ describe('test postTodo actions', () => {
     beforeEach(() => {
         moxios.install()
     })
- 
+
     afterEach(() => {
         moxios.uninstall()
     })
-   
+
     it('dispatches `POST_TODO_SUCCESS` after successfully posting', () => {
        moxios.wait(() => {
            const request = moxios.requests.mostRecent()
@@ -24,7 +24,7 @@ describe('test postTodo actions', () => {
                response: postTodoMock
            })
        })
-   
+
         const expectedActions = [
             { type: actions.POST_TODO_START },
             { type: actions. POST_TODO_SUCCESS, payload: postTodoMock }
@@ -33,6 +33,6 @@ describe('test postTodo actions', () => {
         const store = mockStore({})
         store.dispatch(actions.postTodo()).then(() => {
             expect(store.getActions()).toEqual(expectedActions)
-        })  
+        })
     })
 })

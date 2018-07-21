@@ -30,6 +30,7 @@ ShallowWrapper {
 />,
         "Test",
       ],
+      "className": "task",
     },
     "ref": null,
     "rendered": Array [
@@ -64,6 +65,7 @@ ShallowWrapper {
 />,
           "Test",
         ],
+        "className": "task",
       },
       "ref": null,
       "rendered": Array [

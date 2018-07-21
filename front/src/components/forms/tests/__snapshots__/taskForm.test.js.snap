@@ -21,17 +21,20 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
+        <WithStyles(Input)
           className="task-input"
           onChange={[Function]}
           placeholder="Enter a task"
           type="text"
           value={undefined}
 />,
-        <input
+        <WithStyles(Button)
+          color="primary"
           type="submit"
-          value="add task"
-/>,
+          variant="contained"
+>
+           Add Task 
+</WithStyles(Button)>,
       ],
       "className": "task-form",
       "onSubmit": [Function],
@@ -41,7 +44,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
           "className": "task-input",
           "onChange": [Function],
@@ -51,19 +54,21 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": null,
-        "type": "input",
+        "type": [Function],
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
+          "children": " Add Task ",
+          "color": "primary",
           "type": "submit",
-          "value": "add task",
+          "variant": "contained",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": " Add Task ",
+        "type": [Function],
       },
     ],
     "type": "form",
@@ -75,17 +80,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
+          <WithStyles(Input)
             className="task-input"
             onChange={[Function]}
             placeholder="Enter a task"
             type="text"
             value={undefined}
 />,
-          <input
+          <WithStyles(Button)
+            color="primary"
             type="submit"
-            value="add task"
-/>,
+            variant="contained"
+>
+             Add Task 
+</WithStyles(Button)>,
         ],
         "className": "task-form",
         "onSubmit": [Function],
@@ -95,7 +103,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
             "className": "task-input",
             "onChange": [Function],
@@ -105,19 +113,21 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "children": " Add Task ",
+            "color": "primary",
             "type": "submit",
-            "value": "add task",
+            "variant": "contained",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": " Add Task ",
+          "type": [Function],
         },
       ],
       "type": "form",

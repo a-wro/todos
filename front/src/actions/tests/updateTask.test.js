@@ -1,7 +1,7 @@
 import moxios from 'moxios'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { markTask, MARK_TASK_SUCCESS, MARK_TASK_START } from '../uploadTask'
+import { markTask, MARK_TASK_SUCCESS, MARK_TASK_START } from '../updateTask'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)

@@ -1,22 +1,22 @@
-import uploadTodoReducer, { initialState } from '../uploadTodoReducer'
-import { MARK_TASK_START, MARK_TASK_SUCCESS, MARK_TASK_FAIL } from '../../actions/uploadTask';
+import updateTodoReducer, { initialState } from '../updateTodoReducer'
+import { MARK_TASK_START, MARK_TASK_SUCCESS, MARK_TASK_FAIL } from '../../actions/updateTask';
 
-describe('uploadTodoReducer test', () => {
+describe('updateTodoReducer test', () => {
     it('returns initial state', () => {
-        expect(uploadTodoReducer(undefined, {})).toEqual(initialState)
+        expect(updateTodoReducer(undefined, {})).toEqual(initialState)
     })
 
     it('handles markTaskStart action', () => {
-        expect(uploadTodoReducer(undefined, { type: MARK_TASK_START}))
+        expect(updateTodoReducer(undefined, { type: MARK_TASK_START}))
         .toEqual({
             uploading: true,
-            method: 'PUT',
+            method: 'PATCH',
             error: null
         })
     })
 
     it('handles markTaskFail action', () => {
-        expect(uploadTodoReducer(undefined, {
+        expect(updateTodoReducer(undefined, {
             type: MARK_TASK_FAIL,
             payload: 'ERROR'}))
             .toEqual({
@@ -27,7 +27,7 @@ describe('uploadTodoReducer test', () => {
         })
 
     it('handles markTaskSuccess action', () => {
-        expect(uploadTodoReducer(undefined, { type: MARK_TASK_SUCCESS }))
+        expect(updateTodoReducer(undefined, { type: MARK_TASK_SUCCESS }))
         .toEqual(initialState)
     })
 
