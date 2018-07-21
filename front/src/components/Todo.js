@@ -1,23 +1,22 @@
 import React from 'react'
+import Checkbox from '@material-ui/core/Checkbox';
+import { connect } from 'react-redux'
+import { markTask } from '../actions/uploadTask'
 
 export class Todo extends React.Component {
-    state = {
-        completed: this.props.completed,
-    }
-
     handleClick = e => {
-        this.setState({ completed: !this.state.completed })
+        this.props.markTask(this.props.id, this.props.completed)
+        if (this.props.handleClick) { this.props.handleClick() } // for unit test
     }
 
     render() {
-        const { task } = this.props
+        const { task, completed } = this.props
         return (
             <div>
-                <input
+                <Checkbox
                     onClick={this.handleClick}
                     className="task-checkbox"
-                    type="checkbox"
-                    value={this.state.completed}
+                    checked={completed}
                 />
                 { task }
             </div>
@@ -25,4 +24,4 @@ export class Todo extends React.Component {
     }
 }
 
-export default Todo
+export default connect(null, { markTask })(Todo)

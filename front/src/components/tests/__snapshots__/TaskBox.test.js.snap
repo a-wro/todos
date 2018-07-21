@@ -44,14 +44,16 @@ ShallowWrapper {
 />,
         <div>
           <div>
-                    <Todo
+                    <Connect(Todo)
                               completed={false}
+                              id={1}
                               task="test"
                     />
           </div>
           <div>
-                    <Todo
+                    <Connect(Todo)
                               completed={false}
+                              id={2}
                               task="test 2"
                     />
           </div>
@@ -80,14 +82,16 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div>
-              <Todo
+              <Connect(Todo)
                             completed={false}
+                            id={1}
                             task="test"
               />
 </div>,
             <div>
-              <Todo
+              <Connect(Todo)
                             completed={false}
+                            id={2}
                             task="test 2"
               />
 </div>,
@@ -100,8 +104,9 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "host",
             "props": Object {
-              "children": <Todo
+              "children": <Connect(Todo)
                 completed={false}
+                id={1}
                 task="test"
 />,
             },
@@ -112,6 +117,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "completed": false,
+                "id": 1,
                 "task": "test",
               },
               "ref": null,
@@ -125,8 +131,9 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "host",
             "props": Object {
-              "children": <Todo
+              "children": <Connect(Todo)
                 completed={false}
+                id={2}
                 task="test 2"
 />,
             },
@@ -137,6 +144,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "completed": false,
+                "id": 2,
                 "task": "test 2",
               },
               "ref": null,
@@ -165,14 +173,16 @@ ShallowWrapper {
 />,
           <div>
             <div>
-                        <Todo
+                        <Connect(Todo)
                                     completed={false}
+                                    id={1}
                                     task="test"
                         />
             </div>
             <div>
-                        <Todo
+                        <Connect(Todo)
                                     completed={false}
+                                    id={2}
                                     task="test 2"
                         />
             </div>
@@ -201,14 +211,16 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div>
-                <Todo
+                <Connect(Todo)
                                 completed={false}
+                                id={1}
                                 task="test"
                 />
 </div>,
               <div>
-                <Todo
+                <Connect(Todo)
                                 completed={false}
+                                id={2}
                                 task="test 2"
                 />
 </div>,
@@ -221,8 +233,9 @@ ShallowWrapper {
               "key": "1",
               "nodeType": "host",
               "props": Object {
-                "children": <Todo
+                "children": <Connect(Todo)
                   completed={false}
+                  id={1}
                   task="test"
 />,
               },
@@ -233,6 +246,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "completed": false,
+                  "id": 1,
                   "task": "test",
                 },
                 "ref": null,
@@ -246,8 +260,9 @@ ShallowWrapper {
               "key": "2",
               "nodeType": "host",
               "props": Object {
-                "children": <Todo
+                "children": <Connect(Todo)
                   completed={false}
+                  id={2}
                   task="test 2"
 />,
               },
@@ -258,6 +273,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "completed": false,
+                  "id": 2,
                   "task": "test 2",
                 },
                 "ref": null,

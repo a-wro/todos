@@ -26,6 +26,9 @@ export class TaskBox extends React.Component {
 
     render() {
         const { todos } = this.props
+
+        if (todos.loading) return <div> LOADING </div>
+
         return (
             <div>
 
@@ -36,12 +39,13 @@ export class TaskBox extends React.Component {
                 />
 
                 <div>
-                  {todos.tasks.map(todo => {
+                  {todos.tasks.map(task => {
                       return (
-                        <div key={todo.id}>
+                        <div key={task.id}>
                             <Todo
-                                task={todo.task}
-                                completed={todo.completed}
+                                id={task.id}
+                                task={task.task}
+                                completed={task.completed}
                             />
                         </div>
                       )
@@ -55,6 +59,7 @@ export class TaskBox extends React.Component {
 const mapStateToProps = state => {
     return {
         todos: state.todos
+
     }
 }
 

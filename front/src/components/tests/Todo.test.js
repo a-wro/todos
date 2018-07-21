@@ -4,7 +4,9 @@ import { shallow } from 'enzyme'
 
 
 describe('Todo', () => {
-    const props = { task: 'Test', completed: false}
+    const mockClick = jest.fn()
+    const mockMarkTask = jest.fn()
+    const props = { task: 'Test', completed: false, handleClick: mockClick, markTask: mockMarkTask }
     const todo = shallow(<Todo {...props} />)
 
     describe('Rendering', () => {
@@ -18,13 +20,13 @@ describe('Todo', () => {
 
     })
 
-    describe('State related tests', () => {
+    describe('Action related tests', () => {
         beforeEach(() => {
             todo.find('.task-checkbox').simulate('click')
         })
 
-        it('Changes `completed` to true from previously false on click', () => {
-            expect(todo.state().completed).toBe(true)
+        it('Dispatches `markTask` after clicking on a checkbox', () => {
+            expect(mockMarkTask).toHaveBeenCalled()
         })
     })
 

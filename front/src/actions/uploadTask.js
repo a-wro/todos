@@ -10,35 +10,33 @@ export const markTaskStart = () => {
     }
 }
 
-export const markTaskFail = () => {
+export const markTaskFail = err => {
     return {
-        type: MARK_TASK_FAIL
+        type: MARK_TASK_FAIL,
+        payload: err
     }
 }
 
-export const markTaskSuccess = data => {
+export const markTaskSuccess = () => {
     return {
         type: MARK_TASK_SUCCESS,
-        payload: data
     }
 }
 
-const markTask = todo => dispatch => {
+export const markTask = (id, newMark) => dispatch => {
     dispatch(markTaskStart())
 
     return axios({
-        method: 'PUT',
-        url: `http://127.0.0.1:8000/api/todo/update/${todo.id}/`,
-        data: todo
+        method: 'PATCH',
+        url: `http://127.0.0.1:8000/api/todo/update/${id}/`,
+        data: { completed: !newMark }
     })
     .then(res => {
-        dispatch(markTaskSuccess(res.data))
+        dispatch(markTaskSuccess())
         return res
     })
-    .then(err => {
+    .catch(err => {
         dispatch(markTaskFail(err))
         return err
     })
 }
-
-export default markTask

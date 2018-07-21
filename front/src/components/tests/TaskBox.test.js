@@ -22,7 +22,7 @@ describe('TaskBox', () => {
       })
 
       it('correctly renders a `Todo` component', () => {
-        expect(taskbox.find('Todo').exists()).toBe(true)
+        expect(taskbox.find('Connect(Todo)').exists()).toBe(true)
       })
   })
 

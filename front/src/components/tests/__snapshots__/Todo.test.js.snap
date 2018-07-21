@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Todo
     completed={false}
+    handleClick={[Function]}
+    markTask={[Function]}
     task="Test"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -21,11 +23,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
+        <WithStyles(Checkbox)
+          checked={false}
           className="task-checkbox"
           onClick={[Function]}
-          type="checkbox"
-          value={false}
 />,
         "Test",
       ],
@@ -35,16 +36,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
+          "checked": false,
           "className": "task-checkbox",
           "onClick": [Function],
-          "type": "checkbox",
-          "value": false,
         },
         "ref": null,
         "rendered": null,
-        "type": "input",
+        "type": [Function],
       },
       "Test",
     ],
@@ -57,11 +57,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
+          <WithStyles(Checkbox)
+            checked={false}
             className="task-checkbox"
             onClick={[Function]}
-            type="checkbox"
-            value={false}
 />,
           "Test",
         ],
@@ -71,16 +70,15 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "checked": false,
             "className": "task-checkbox",
             "onClick": [Function],
-            "type": "checkbox",
-            "value": false,
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": [Function],
         },
         "Test",
       ],
