@@ -1,7 +1,11 @@
 import React from 'react'
 import Checkbox from '@material-ui/core/Checkbox'
+import Button from '@material-ui/core/Button'
+import DeleteIcon from '@material-ui/icons/Delete'
+import Icon from '@material-ui/core/Icon'
 import { connect } from 'react-redux'
-import { markTask } from '../actions/updateTask'
+import { markTask} from '../actions/updateTask'
+import './styles/Todo.css'
 
 export class Todo extends React.Component {
     state = {
@@ -19,7 +23,7 @@ export class Todo extends React.Component {
     }
 
     render() {
-        const { task, completed } = this.props
+        const { task, id, openDeleteDialog, openEditForm } = this.props
         return (
             <div className="task">
                 <Checkbox
@@ -28,6 +32,26 @@ export class Todo extends React.Component {
                     checked={this.state.completed}
                 />
                 { task }
+
+                <Button
+                    className="todo-btn"
+                    mini
+                    onClick={() => openDeleteDialog(id)}
+                    variant="fab"
+                    color="secondary"
+                    aria-label="Delete">
+                    <DeleteIcon />
+                </Button>
+                <Button
+                    className="todo-btn"
+                    mini
+                    onClick={() => openEditForm(task, id)}
+                    variant="fab"
+                    color="default"
+                    aria-label="Edit">
+                    <Icon>edit</Icon>
+                </Button>
+
             </div>
         )
     }

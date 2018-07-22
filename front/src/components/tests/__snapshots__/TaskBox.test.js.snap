@@ -38,27 +38,52 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <TaskForm
+          handleClose={[Function]}
           onChange={[Function]}
           onSubmit={[Function]}
+          openEditForm={[Function]}
+          type={null}
           value=""
+          visible={false}
 />,
-        <WithStyles(List)>
-          <WithStyles(ListItem)>
-                    <Connect(Todo)
-                              completed={false}
-                              id={1}
-                              task="test"
-                    />
-          </WithStyles(ListItem)>
-          <WithStyles(ListItem)>
-                    <Connect(Todo)
-                              completed={false}
-                              id={2}
-                              task="test 2"
-                    />
-          </WithStyles(ListItem)>
-</WithStyles(List)>,
+        Array [
+          <WithStyles(Paper)
+            className="todo-paper"
+>
+            <Connect(Todo)
+                        className="task"
+                        completed={false}
+                        id={1}
+                        openEditForm={[Function]}
+                        task="test"
+            />
+</WithStyles(Paper)>,
+          <WithStyles(Paper)
+            className="todo-paper"
+>
+            <Connect(Todo)
+                        className="task"
+                        completed={false}
+                        id={2}
+                        openEditForm={[Function]}
+                        task="test 2"
+            />
+</WithStyles(Paper)>,
+        ],
+        <div
+          className="add-button"
+>
+          <WithStyles(Button)
+                    aria-label="Add"
+                    color="primary"
+                    onClick={[Function]}
+                    variant="fab"
+          >
+                    <pure(Add) />
+          </WithStyles(Button)>
+</div>,
       ],
+      "className": "task-box",
     },
     "ref": null,
     "rendered": Array [
@@ -67,9 +92,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "handleClose": [Function],
           "onChange": [Function],
           "onSubmit": [Function],
+          "openEditForm": [Function],
+          "type": null,
           "value": "",
+          "visible": false,
         },
         "ref": null,
         "rendered": null,
@@ -77,84 +106,108 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1",
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <WithStyles(ListItem)>
-              <Connect(Todo)
-                            completed={false}
-                            id={1}
-                            task="test"
-              />
-</WithStyles(ListItem)>,
-            <WithStyles(ListItem)>
-              <Connect(Todo)
-                            completed={false}
-                            id={2}
-                            task="test 2"
-              />
-</WithStyles(ListItem)>,
-          ],
+          "children": <Connect(Todo)
+            className="task"
+            completed={false}
+            id={1}
+            openEditForm={[Function]}
+            task="test"
+/>,
+          "className": "todo-paper",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "class",
-            "props": Object {
-              "children": <Connect(Todo)
-                completed={false}
-                id={1}
-                task="test"
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "completed": false,
-                "id": 1,
-                "task": "test",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "task",
+            "completed": false,
+            "id": 1,
+            "openEditForm": [Function],
+            "task": "test",
           },
-          Object {
-            "instance": null,
-            "key": "2",
-            "nodeType": "class",
-            "props": Object {
-              "children": <Connect(Todo)
-                completed={false}
-                id={2}
-                task="test 2"
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "completed": false,
-                "id": 2,
-                "task": "test 2",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "children": <Connect(Todo)
+            className="task"
+            completed={false}
+            id={2}
+            openEditForm={[Function]}
+            task="test 2"
+/>,
+          "className": "todo-paper",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "task",
+            "completed": false,
+            "id": 2,
+            "openEditForm": [Function],
+            "task": "test 2",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <WithStyles(Button)
+            aria-label="Add"
+            color="primary"
+            onClick={[Function]}
+            variant="fab"
+>
+            <pure(Add) />
+</WithStyles(Button)>,
+          "className": "add-button",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "aria-label": "Add",
+            "children": <pure(Add) />,
+            "color": "primary",
+            "onClick": [Function],
+            "variant": "fab",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -167,27 +220,52 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <TaskForm
+            handleClose={[Function]}
             onChange={[Function]}
             onSubmit={[Function]}
+            openEditForm={[Function]}
+            type={null}
             value=""
+            visible={false}
 />,
-          <WithStyles(List)>
-            <WithStyles(ListItem)>
-                        <Connect(Todo)
-                                    completed={false}
-                                    id={1}
-                                    task="test"
-                        />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)>
-                        <Connect(Todo)
-                                    completed={false}
-                                    id={2}
-                                    task="test 2"
-                        />
-            </WithStyles(ListItem)>
-</WithStyles(List)>,
+          Array [
+            <WithStyles(Paper)
+              className="todo-paper"
+>
+              <Connect(Todo)
+                            className="task"
+                            completed={false}
+                            id={1}
+                            openEditForm={[Function]}
+                            task="test"
+              />
+</WithStyles(Paper)>,
+            <WithStyles(Paper)
+              className="todo-paper"
+>
+              <Connect(Todo)
+                            className="task"
+                            completed={false}
+                            id={2}
+                            openEditForm={[Function]}
+                            task="test 2"
+              />
+</WithStyles(Paper)>,
+          ],
+          <div
+            className="add-button"
+>
+            <WithStyles(Button)
+                        aria-label="Add"
+                        color="primary"
+                        onClick={[Function]}
+                        variant="fab"
+            >
+                        <pure(Add) />
+            </WithStyles(Button)>
+</div>,
         ],
+        "className": "task-box",
       },
       "ref": null,
       "rendered": Array [
@@ -196,9 +274,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "handleClose": [Function],
             "onChange": [Function],
             "onSubmit": [Function],
+            "openEditForm": [Function],
+            "type": null,
             "value": "",
+            "visible": false,
           },
           "ref": null,
           "rendered": null,
@@ -206,84 +288,108 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1",
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <WithStyles(ListItem)>
-                <Connect(Todo)
-                                completed={false}
-                                id={1}
-                                task="test"
-                />
-</WithStyles(ListItem)>,
-              <WithStyles(ListItem)>
-                <Connect(Todo)
-                                completed={false}
-                                id={2}
-                                task="test 2"
-                />
-</WithStyles(ListItem)>,
-            ],
+            "children": <Connect(Todo)
+              className="task"
+              completed={false}
+              id={1}
+              openEditForm={[Function]}
+              task="test"
+/>,
+            "className": "todo-paper",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "class",
-              "props": Object {
-                "children": <Connect(Todo)
-                  completed={false}
-                  id={1}
-                  task="test"
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "completed": false,
-                  "id": 1,
-                  "task": "test",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "task",
+              "completed": false,
+              "id": 1,
+              "openEditForm": [Function],
+              "task": "test",
             },
-            Object {
-              "instance": null,
-              "key": "2",
-              "nodeType": "class",
-              "props": Object {
-                "children": <Connect(Todo)
-                  completed={false}
-                  id={2}
-                  task="test 2"
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "completed": false,
-                  "id": 2,
-                  "task": "test 2",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "children": <Connect(Todo)
+              className="task"
+              completed={false}
+              id={2}
+              openEditForm={[Function]}
+              task="test 2"
+/>,
+            "className": "todo-paper",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "task",
+              "completed": false,
+              "id": 2,
+              "openEditForm": [Function],
+              "task": "test 2",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <WithStyles(Button)
+              aria-label="Add"
+              color="primary"
+              onClick={[Function]}
+              variant="fab"
+>
+              <pure(Add) />
+</WithStyles(Button)>,
+            "className": "add-button",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "aria-label": "Add",
+              "children": <pure(Add) />,
+              "color": "primary",
+              "onClick": [Function],
+              "variant": "fab",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": "div",
         },
       ],
       "type": "div",

@@ -1,0 +1,18 @@
+
+.add-button {
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+.todo-paper {
+    margin: auto;
+    width: 60%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.task-box {
+    margin-top: 2.5rem;
+}

@@ -29,6 +29,17 @@ ShallowWrapper {
           onClick={[Function]}
 />,
         "Test",
+        <i
+          className="material-icons"
+>
+          delete
+</i>,
+        <i
+          className="material-icons"
+          onClick={[Function]}
+>
+          edit
+</i>,
       ],
       "className": "task",
     },
@@ -48,6 +59,31 @@ ShallowWrapper {
         "type": [Function],
       },
       "Test",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "delete",
+          "className": "material-icons",
+        },
+        "ref": null,
+        "rendered": "delete",
+        "type": "i",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "edit",
+          "className": "material-icons",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "edit",
+        "type": "i",
+      },
     ],
     "type": "div",
   },
@@ -64,6 +100,17 @@ ShallowWrapper {
             onClick={[Function]}
 />,
           "Test",
+          <i
+            className="material-icons"
+>
+            delete
+</i>,
+          <i
+            className="material-icons"
+            onClick={[Function]}
+>
+            edit
+</i>,
         ],
         "className": "task",
       },
@@ -83,6 +130,31 @@ ShallowWrapper {
           "type": [Function],
         },
         "Test",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "delete",
+            "className": "material-icons",
+          },
+          "ref": null,
+          "rendered": "delete",
+          "type": "i",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "edit",
+            "className": "material-icons",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "edit",
+          "type": "i",
+        },
       ],
       "type": "div",
     },

@@ -1,13 +1,13 @@
 import updateTodoReducer, { initialState } from '../updateTodoReducer'
-import { MARK_TASK_START, MARK_TASK_SUCCESS, MARK_TASK_FAIL } from '../../actions/updateTask';
+import { EDIT_TASK_START, EDIT_TASK_SUCCESS, EDIT_TASK_FAIL } from '../../actions/updateTask';
 
 describe('updateTodoReducer test', () => {
     it('returns initial state', () => {
         expect(updateTodoReducer(undefined, {})).toEqual(initialState)
     })
 
-    it('handles markTaskStart action', () => {
-        expect(updateTodoReducer(undefined, { type: MARK_TASK_START}))
+    it('handles editTaskStart action', () => {
+        expect(updateTodoReducer(undefined, { type: EDIT_TASK_START}))
         .toEqual({
             uploading: true,
             method: 'PATCH',
@@ -15,9 +15,9 @@ describe('updateTodoReducer test', () => {
         })
     })
 
-    it('handles markTaskFail action', () => {
+    it('handles editTaskFail action', () => {
         expect(updateTodoReducer(undefined, {
-            type: MARK_TASK_FAIL,
+            type: EDIT_TASK_FAIL,
             payload: 'ERROR'}))
             .toEqual({
                 uploading: false,
@@ -26,8 +26,33 @@ describe('updateTodoReducer test', () => {
             })
         })
 
-    it('handles markTaskSuccess action', () => {
-        expect(updateTodoReducer(undefined, { type: MARK_TASK_SUCCESS }))
+    it('handles editTaskSuccess action', () => {
+        expect(updateTodoReducer(undefined, { type: EDIT_TASK_SUCCESS }))
+        .toEqual(initialState)
+    })
+
+    it('handles editTaskStart action', () => {
+        expect(updateTodoReducer(undefined, { type: EDIT_TASK_START}))
+        .toEqual({
+            uploading: true,
+            method: 'PATCH',
+            error: null
+        })
+    })
+
+    it('handles editTaskFail action', () => {
+        expect(updateTodoReducer(undefined, {
+            type: EDIT_TASK_FAIL,
+            payload: 'ERROR'}))
+            .toEqual({
+                uploading: false,
+                method: '',
+                error: 'ERROR'
+            })
+        })
+
+    it('handles editTaskSuccess action', () => {
+        expect(updateTodoReducer(undefined, { type: EDIT_TASK_SUCCESS }))
         .toEqual(initialState)
     })
 

@@ -18,26 +18,41 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
+      "aria-labelledby": "form-dialog-title",
       "children": Array [
-        <WithStyles(Input)
-          className="task-input"
-          onChange={[Function]}
-          placeholder="Enter a task"
-          type="text"
-          value={undefined}
+        <WithStyles(DialogTitle)
+          id="form-dialog-title"
+>
+           a to-do
+</WithStyles(DialogTitle)>,
+        <WithStyles(DialogContent)>
+          <form
+                    className="task-form"
+                    onSubmit={[Function]}
+          >
+                    <WithStyles(Input)
+                              className="task-input"
+                              onChange={[Function]}
+                              placeholder="Edit"
+                              type="text"
+                              value={undefined}
+                    />
+          </form>
+</WithStyles(DialogContent)>,
+        <WithStyles(Button)
+          onClick={[Function]}
+          type="submit"
 />,
         <WithStyles(Button)
-          color="primary"
-          type="submit"
-          variant="contained"
+          onClick={undefined}
 >
-           Add Task 
+          Cancel
 </WithStyles(Button)>,
       ],
-      "className": "task-form",
-      "onSubmit": [Function],
+      "onClose": undefined,
+      "open": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -46,11 +61,81 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "className": "task-input",
-          "onChange": [Function],
-          "placeholder": "Enter a task",
-          "type": "text",
-          "value": undefined,
+          "children": Array [
+            undefined,
+            " a to-do",
+          ],
+          "id": "form-dialog-title",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          " a to-do",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <form
+            className="task-form"
+            onSubmit={[Function]}
+>
+            <WithStyles(Input)
+                        className="task-input"
+                        onChange={[Function]}
+                        placeholder="Edit"
+                        type="text"
+                        value={undefined}
+            />
+</form>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <WithStyles(Input)
+              className="task-input"
+              onChange={[Function]}
+              placeholder="Edit"
+              type="text"
+              value={undefined}
+/>,
+            "className": "task-form",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "task-input",
+              "onChange": [Function],
+              "placeholder": "Edit",
+              "type": "text",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "form",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+          "onClick": [Function],
+          "type": "submit",
         },
         "ref": null,
         "rendered": null,
@@ -61,42 +146,55 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": " Add Task ",
-          "color": "primary",
-          "type": "submit",
-          "variant": "contained",
+          "children": "Cancel",
+          "onClick": undefined,
         },
         "ref": null,
-        "rendered": " Add Task ",
+        "rendered": "Cancel",
         "type": [Function],
       },
     ],
-    "type": "form",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
+        "aria-labelledby": "form-dialog-title",
         "children": Array [
-          <WithStyles(Input)
-            className="task-input"
-            onChange={[Function]}
-            placeholder="Enter a task"
-            type="text"
-            value={undefined}
+          <WithStyles(DialogTitle)
+            id="form-dialog-title"
+>
+             a to-do
+</WithStyles(DialogTitle)>,
+          <WithStyles(DialogContent)>
+            <form
+                        className="task-form"
+                        onSubmit={[Function]}
+            >
+                        <WithStyles(Input)
+                                    className="task-input"
+                                    onChange={[Function]}
+                                    placeholder="Edit"
+                                    type="text"
+                                    value={undefined}
+                        />
+            </form>
+</WithStyles(DialogContent)>,
+          <WithStyles(Button)
+            onClick={[Function]}
+            type="submit"
 />,
           <WithStyles(Button)
-            color="primary"
-            type="submit"
-            variant="contained"
+            onClick={undefined}
 >
-             Add Task 
+            Cancel
 </WithStyles(Button)>,
         ],
-        "className": "task-form",
-        "onSubmit": [Function],
+        "onClose": undefined,
+        "open": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -105,11 +203,81 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "className": "task-input",
-            "onChange": [Function],
-            "placeholder": "Enter a task",
-            "type": "text",
-            "value": undefined,
+            "children": Array [
+              undefined,
+              " a to-do",
+            ],
+            "id": "form-dialog-title",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            " a to-do",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <form
+              className="task-form"
+              onSubmit={[Function]}
+>
+              <WithStyles(Input)
+                            className="task-input"
+                            onChange={[Function]}
+                            placeholder="Edit"
+                            type="text"
+                            value={undefined}
+              />
+</form>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <WithStyles(Input)
+                className="task-input"
+                onChange={[Function]}
+                placeholder="Edit"
+                type="text"
+                value={undefined}
+/>,
+              "className": "task-form",
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "className": "task-input",
+                "onChange": [Function],
+                "placeholder": "Edit",
+                "type": "text",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "form",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "onClick": [Function],
+            "type": "submit",
           },
           "ref": null,
           "rendered": null,
@@ -120,17 +288,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": " Add Task ",
-            "color": "primary",
-            "type": "submit",
-            "variant": "contained",
+            "children": "Cancel",
+            "onClick": undefined,
           },
           "ref": null,
-          "rendered": " Add Task ",
+          "rendered": "Cancel",
           "type": [Function],
         },
       ],
-      "type": "form",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
