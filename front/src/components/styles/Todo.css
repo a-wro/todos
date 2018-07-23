@@ -1,11 +1,3 @@
 .todo-btn {
     float: right;
-    margin-right: 1.25rem;
-    overflow: hidden;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }

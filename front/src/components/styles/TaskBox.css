@@ -14,5 +14,14 @@
 }
 
 .task-box {
-    margin-top: 2.5rem;
+    margin-top: 5.5rem;
+}
+
+.task {
+    margin-right: 1em;
+}
+
+.center {
+    text-align: center;
+    margin-top: 15%;
 }

@@ -26,6 +26,10 @@ class TodoPut(generics.RetrieveUpdateAPIView):
     serializer_class = TodoSerializer
     queryset = Todo.objects.all()
 
+class TodoDelete(generics.DestroyAPIView):
+    serializer_class = TodoSerializer
+    queryset = Todo.objects.all()
+
 class ChecklistCreate(generics.CreateAPIView):
     serializer_class = ChecklistSerializer
     queryset = Checklist.objects.all()

@@ -41,9 +41,13 @@ ShallowWrapper {
           handleClose={[Function]}
           onChange={[Function]}
           onSubmit={[Function]}
-          openEditForm={[Function]}
           type={null}
           value=""
+          visible={false}
+/>,
+        <DeleteDialog
+          confirmDelete={[Function]}
+          handleClose={[Function]}
           visible={false}
 />,
         Array [
@@ -54,6 +58,7 @@ ShallowWrapper {
                         className="task"
                         completed={false}
                         id={1}
+                        openDeleteDialog={[Function]}
                         openEditForm={[Function]}
                         task="test"
             />
@@ -65,6 +70,7 @@ ShallowWrapper {
                         className="task"
                         completed={false}
                         id={2}
+                        openDeleteDialog={[Function]}
                         openEditForm={[Function]}
                         task="test 2"
             />
@@ -90,14 +96,26 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "handleClose": [Function],
           "onChange": [Function],
           "onSubmit": [Function],
-          "openEditForm": [Function],
           "type": null,
           "value": "",
+          "visible": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "confirmDelete": [Function],
+          "handleClose": [Function],
           "visible": false,
         },
         "ref": null,
@@ -113,6 +131,7 @@ ShallowWrapper {
             className="task"
             completed={false}
             id={1}
+            openDeleteDialog={[Function]}
             openEditForm={[Function]}
             task="test"
 />,
@@ -127,6 +146,7 @@ ShallowWrapper {
             "className": "task",
             "completed": false,
             "id": 1,
+            "openDeleteDialog": [Function],
             "openEditForm": [Function],
             "task": "test",
           },
@@ -145,6 +165,7 @@ ShallowWrapper {
             className="task"
             completed={false}
             id={2}
+            openDeleteDialog={[Function]}
             openEditForm={[Function]}
             task="test 2"
 />,
@@ -159,6 +180,7 @@ ShallowWrapper {
             "className": "task",
             "completed": false,
             "id": 2,
+            "openDeleteDialog": [Function],
             "openEditForm": [Function],
             "task": "test 2",
           },
@@ -223,9 +245,13 @@ ShallowWrapper {
             handleClose={[Function]}
             onChange={[Function]}
             onSubmit={[Function]}
-            openEditForm={[Function]}
             type={null}
             value=""
+            visible={false}
+/>,
+          <DeleteDialog
+            confirmDelete={[Function]}
+            handleClose={[Function]}
             visible={false}
 />,
           Array [
@@ -236,6 +262,7 @@ ShallowWrapper {
                             className="task"
                             completed={false}
                             id={1}
+                            openDeleteDialog={[Function]}
                             openEditForm={[Function]}
                             task="test"
               />
@@ -247,6 +274,7 @@ ShallowWrapper {
                             className="task"
                             completed={false}
                             id={2}
+                            openDeleteDialog={[Function]}
                             openEditForm={[Function]}
                             task="test 2"
               />
@@ -272,14 +300,26 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "handleClose": [Function],
             "onChange": [Function],
             "onSubmit": [Function],
-            "openEditForm": [Function],
             "type": null,
             "value": "",
+            "visible": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "confirmDelete": [Function],
+            "handleClose": [Function],
             "visible": false,
           },
           "ref": null,
@@ -295,6 +335,7 @@ ShallowWrapper {
               className="task"
               completed={false}
               id={1}
+              openDeleteDialog={[Function]}
               openEditForm={[Function]}
               task="test"
 />,
@@ -309,6 +350,7 @@ ShallowWrapper {
               "className": "task",
               "completed": false,
               "id": 1,
+              "openDeleteDialog": [Function],
               "openEditForm": [Function],
               "task": "test",
             },
@@ -327,6 +369,7 @@ ShallowWrapper {
               className="task"
               completed={false}
               id={2}
+              openDeleteDialog={[Function]}
               openEditForm={[Function]}
               task="test 2"
 />,
@@ -341,6 +384,7 @@ ShallowWrapper {
               "className": "task",
               "completed": false,
               "id": 2,
+              "openDeleteDialog": [Function],
               "openEditForm": [Function],
               "task": "test 2",
             },

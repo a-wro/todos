@@ -24,6 +24,10 @@ class TestREQUESTS:
         response = client.put(self.put_url, serialized.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    def test_delete(self):
+        response = client.delete(self.delete_url)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
 class TestTodo(APITestCase, TestREQUESTS):
     def setUp(self):
         self.mock_obj = Todo.objects.create(task='Test task')
@@ -32,7 +36,8 @@ class TestTodo(APITestCase, TestREQUESTS):
         self.post_url = reverse('todo_create')
         self.serializer = TodoSerializer
         self.put_url = reverse('todo_put', kwargs={'pk': 1})
-
+        self.delete_url = reverse('todo_delete', kwargs={'pk': 1})
+'''
 class TestChecklist(APITestCase, TestREQUESTS):
     def setUp(self):
         mock_todo = Todo.objects.create(task='Test task')
@@ -42,3 +47,5 @@ class TestChecklist(APITestCase, TestREQUESTS):
         self.post_url = reverse('checklist_create')
         self.serializer = ChecklistSerializer
         self.put_url = None
+        self.delete_url = None
+'''

@@ -5,10 +5,12 @@ import DeleteDialog from './DeleteDialog'
 import { connect } from 'react-redux'
 import { getTodos } from '../actions/getTodos'
 import { postTodo } from '../actions/postTodo'
+import { deleteTodo } from '../actions/deleteTodo'
 import { editTask } from '../actions/updateTask'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import AddIcon from '@material-ui/icons/Add'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import './styles/TaskBox.css'
 
 export class TaskBox extends React.Component {
@@ -42,15 +44,15 @@ export class TaskBox extends React.Component {
     }
 
     openTaskForm = () => {
-        this.setState({ dialogVisible: true, dialogType: 'Add' })
+        this.setState({ dialogVisible: true, dialogType: 'Add', term: '' })
     }
 
     openEditForm = (task, id) => {
         this.setState({ dialogVisible: true, dialogType: 'Edit', term: task, id: id })
     }
 
-    openDeleteDialog = () => {
-        this.setState({ deleteDialogVisible: true})
+    openDeleteDialog = (id) => {
+        this.setState({ deleteDialogVisible: true, id: id})
     }
 
     closeTaskForm = () => {
@@ -61,10 +63,22 @@ export class TaskBox extends React.Component {
         this.setState({ deleteDialogVisible: false })
     }
 
-    render() {
-        const { todos } = this.props
+    confirmDelete = () => {
+        console.log(this.state.id)
+        this.props.deleteTodo(this.state.id)
+        this.setState({ deleteDialogVisible: false })
+    }
 
-        if (todos.loading) return (<div> LOADING </div>)
+    render() {
+        const { todos, deleteTodo } = this.props
+        console.log(todos.loading)
+        if (todos.loading) {
+            return (
+                <div className="center">
+                   <CircularProgress size={100}/>
+                </div>
+            )
+        }
 
         return (
             <div className="task-box">
@@ -75,12 +89,12 @@ export class TaskBox extends React.Component {
                     onChange={this.handleChange}
                     value={this.state.term}
                     onSubmit={this.handleSubmit}
-                    openEditForm={this.openEditForm}
                 />
 
                 <DeleteDialog
                     visible={this.state.deleteDialogVisible}
                     handleClose={this.closeDeleteDialog}
+                    confirmDelete={this.confirmDelete}
                 />
 
 
@@ -120,4 +134,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getTodos, postTodo, editTask })(TaskBox)
+export default connect(mapStateToProps, { getTodos, postTodo, editTask, deleteTodo })(TaskBox)

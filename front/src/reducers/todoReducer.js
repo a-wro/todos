@@ -27,7 +27,7 @@ const todoReducer = (state = initialState, action) => {
         case GET_TODOS_FAIL:
             return {
                 ...state,
-                loading: false,
+                loading: true, // tymczasowo
                 error: true,
             }
 
