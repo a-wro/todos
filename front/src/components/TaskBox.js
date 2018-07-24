@@ -71,7 +71,6 @@ export class TaskBox extends React.Component {
 
     render() {
         const { todos, deleteTodo } = this.props
-        console.log(todos.loading)
         if (todos.loading) {
             return (
                 <div className="center">

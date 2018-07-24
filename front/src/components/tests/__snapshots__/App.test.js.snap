@@ -28,7 +28,7 @@ ShallowWrapper {
                         item={true}
                         xs={12}
                 >
-                        <Connect(TaskBox) />
+                        <Connect(ChecklistBox) />
                 </WithStyles(Grid)>
                 <WithStyles(Grid)
                         item={true}
@@ -61,7 +61,7 @@ ShallowWrapper {
                     item={true}
                     xs={12}
           >
-                    <Connect(TaskBox) />
+                    <Connect(ChecklistBox) />
           </WithStyles(Grid)>
           <WithStyles(Grid)
                     item={true}
@@ -84,7 +84,7 @@ ShallowWrapper {
               item={true}
               xs={12}
 >
-              <Connect(TaskBox) />
+              <Connect(ChecklistBox) />
 </WithStyles(Grid)>,
             <WithStyles(Grid)
               item={true}
@@ -104,7 +104,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <Connect(TaskBox) />,
+              "children": <Connect(ChecklistBox) />,
               "item": true,
               "xs": 12,
             },
@@ -166,7 +166,7 @@ ShallowWrapper {
                               item={true}
                               xs={12}
                     >
-                              <Connect(TaskBox) />
+                              <Connect(ChecklistBox) />
                     </WithStyles(Grid)>
                     <WithStyles(Grid)
                               item={true}
@@ -199,7 +199,7 @@ ShallowWrapper {
                         item={true}
                         xs={12}
             >
-                        <Connect(TaskBox) />
+                        <Connect(ChecklistBox) />
             </WithStyles(Grid)>
             <WithStyles(Grid)
                         item={true}
@@ -222,7 +222,7 @@ ShallowWrapper {
                 item={true}
                 xs={12}
 >
-                <Connect(TaskBox) />
+                <Connect(ChecklistBox) />
 </WithStyles(Grid)>,
               <WithStyles(Grid)
                 item={true}
@@ -242,7 +242,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <Connect(TaskBox) />,
+                "children": <Connect(ChecklistBox) />,
                 "item": true,
                 "xs": 12,
               },
